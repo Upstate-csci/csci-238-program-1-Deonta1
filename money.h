@@ -11,13 +11,14 @@
 #include <sstream>
 #include <iomanip>
 #include <fstream>
+#include <locale>
 
 using namespace std;
 class Money
 {
 private:
-    double total;
-    int hundreds, tens, fives, ones, quarters, dimes, nickels, cents;
+    double total, price, total1;
+    int hundreds, tens, fives, ones, quarters, dimes, nickels, cents, hundreds1, tens1, fives1, ones1, quarters1, dimes1, nickels1, cents1  ;
 public:
     string toString();
     string toCurrency(double amount);
@@ -27,4 +28,8 @@ public:
     string processChangeFloat();
     string processChangeChange();
 };
+
+// format amount as a local currency and return
+
+
 #endif
